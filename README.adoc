@@ -1,0 +1,10 @@
+= Java Training
+
+This is my playground, to hoan some Java skills.
+
+== Streams
+
+Here you will find some various examples of using Java Streams API to
+accomplish different tasks.
+
+
