@@ -1,6 +1,6 @@
 = Java Training
 
-This is my playground, to hoan some Java skills.
+This is my playground, to hone some Java skills.
 
 == Streams
 
