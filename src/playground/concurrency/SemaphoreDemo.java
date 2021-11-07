@@ -106,6 +106,12 @@ class IncThread extends WorkerThread {
 	protected void doWork() {
 		for (int i = 0; i < 5; i++) {
 			Shared.value++;
+			try {
+				Thread.sleep(200);	// to prove that it the DecThread doesn't get a timeslice
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("Share value increase to " + Shared.value + " - " + threadName);
 		}
 	}
@@ -125,6 +131,12 @@ class DecThread extends WorkerThread {
 	protected void doWork() {
 		for (int i = 0; i < 5; i++) {
 			Shared.value--;
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("Share value decreased to " + Shared.value + " - " + threadName);
 		}
 	}
